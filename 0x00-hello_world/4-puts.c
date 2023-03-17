@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-
 /**
- * Making use of the
- * puts()
  * main - Entry point
+ *
+ * description:'main function describe'
  *
  * Return: Always 0 (Success)
  */
