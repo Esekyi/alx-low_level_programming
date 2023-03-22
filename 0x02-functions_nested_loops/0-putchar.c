@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - check the code
@@ -8,14 +9,11 @@
 
 int main(void)
 {
-	putchar('_');
-	putchar('p');
-	putchar('u');
-	putchar('t');
-	putchar('c');
-	putchar('h');
-	putchar('a');
-	putchar('r');
-	putchar('\n');
+	char word[8] = "_putchar";
+	int iterate;
+
+	for (iterate = 0; iterate < 8; iterate++)
+		_putchar(word[iterate]);
+	_putchar('\n');
 	return (0);
 }
