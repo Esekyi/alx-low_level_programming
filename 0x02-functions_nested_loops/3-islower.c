@@ -7,7 +7,7 @@
  * Return: 1 if is lowercase or 0 if is uppercase
  */
 
-int _islower(int c);
+int _islower(int c)
 {
 	char alph;
 	int lower = 0;
