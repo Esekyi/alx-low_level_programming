@@ -9,15 +9,16 @@
 
 int _isupper(int c)
 {
-	char alph;
+	char alph = 'A';
 	int retVal = 0;
 
-	for (alph = 'A'; alph <= 'Z'; alph++)
+	for (; alph <= 'Z'; alph++)
 	{
 		if (c == alph)
+		{
 			retVal = 1;
-		else
-			retVal = 0;
+			break;
+		}
 	}
 	return (retVal);
 }
