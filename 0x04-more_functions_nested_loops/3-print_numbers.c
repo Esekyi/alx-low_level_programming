@@ -2,7 +2,8 @@
 
 /**
  * print_numbers - check main.
- * Description: function to print numbers from 0 - 9
+ * Description: function to print numbers from 0 - 9,
+ * followed by a new line.
  * Return: Nothing.
  */
 
