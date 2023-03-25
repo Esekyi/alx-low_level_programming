@@ -1,5 +1,6 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
+
 /**
  * main - Entry of the program. check code.
  * Description:  a program that prints the numbers from 1 to 100,
@@ -11,7 +12,7 @@ int main(void)
 {
 	int numb;
 
-	for (numb = 1; numb < 100; numb++)
+	for (numb = 1; numb <= 100; numb++)
 	{
 		if ((numb % 3 == 0) && (numb % 5 == 0))
 			printf("FizzBuzz ");
@@ -22,5 +23,7 @@ int main(void)
 		else
 			printf("%d ", numb);
 	}
-	printf("Buzz\n");
+	printf("\n");
+
+	return (0);
 }
