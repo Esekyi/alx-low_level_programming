@@ -18,11 +18,8 @@ int main(int argc, char *argv[])
 	{
 		sum = atoi(argv[1]) * atoi(argv[2]);
 		printf("%d\n", sum);
-		return (0);
 	}
 	else
-	{
 		printf("Error\n");
-		return (1);
-	}
+	return (0);
 }
