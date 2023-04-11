@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
+#include <ctype.h>
 
 /**
  * main -  check code
@@ -12,14 +12,27 @@
 
 int main(int argc, char *argv[])
 {
-	int sum = 0;
+	int count, j, sum = 0;
 
-	if (argc == 3)
+	if (argc == 1)
 	{
-		sum = atoi(argv[1]) * atoi(argv[2]);
-		printf("%d\n", sum);
+		printf("0\n");
+		return (0);
 	}
-	else
-		printf("Error\n");
+	for (count = 1; count < argc; count++)
+	{
+		char *num = argv[count];
+
+		for (j = 0; num[j] != '\0'; j++)
+		{
+			if (!isdigit(num[j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		sum += atoi(num);
+	}
+	printf("%d\n", sum);
 	return (0);
 }
