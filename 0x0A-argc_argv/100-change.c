@@ -9,29 +9,46 @@
  * Return: 0 (success) or 1 (Error)
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	if (argc != 2)
+	int amount, coins = 0;
+
+	if (argc == 2)
+	{
+		amount = atoi(argv[1]);
+		if (amount < 0)
+		{
+			printf("%d\n", 0);
+			return (0);
+		}
+		if (amount % 25 >= 0)
+		{
+			coins += amount / 25;
+			amount = amount % 25;
+		}
+		if (amount % 10 >= 0)
+		{
+			coins += amount / 10;
+			amount = amount % 10;
+		}
+		if (amount % 5 >= 0)
+		{
+			coins += amount / 5;
+			amount = amount % 5;
+		}
+		if (amount % 2 >= 0)
+		{
+			coins += amount / 2;
+			amount = amount % 2;
+		}
+		if (amount % 1 >= 0)
+			coins += amount;
+		printf("%d\n", coins);
+		return (0);
+	}
+	else
 	{
 		printf("Error\n");
 		return (1);
 	}
-	int cents = atoi(argv[1]);
-
-	if (cents < 0)
-	{
-		printf("0\n");
-		return (0);
-	}
-	int coins[] = {25, 10, 5, 2, 1};
-	int num_coins = 0;
-	int i = 0;
-
-	for (; i < 5; i++)
-	{
-		num_coins += cents / coins[i];
-		cents = cents % coins[i];
-	}
-	printf("%d\n", num_coins);
-	return (0);
 }
