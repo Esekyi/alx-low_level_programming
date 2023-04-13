@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * create_array - check code. 
+ * create_array - check code.
  * Description: A function that creates an array of chars.
  * @size: The size of the array
  * @c: A character to array
