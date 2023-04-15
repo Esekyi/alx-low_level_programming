@@ -7,7 +7,7 @@
  * @size: size in bytes of each
  * Description: A function that allocates memory for an array
  *
- * Return: A pointer to 
+ * Return: A pointer to
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
