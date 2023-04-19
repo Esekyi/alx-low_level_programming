@@ -3,7 +3,7 @@
 
 /**
  * init_dog - check code
- * @dog: dog
+ * @d: dog
  * @name: name of dog
  * @age: dog's age
  * @owner: dog's owner
