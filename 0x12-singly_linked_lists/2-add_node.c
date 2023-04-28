@@ -2,6 +2,26 @@
 #include <string.h>
 
 /**
+ * _stringlen - check code
+ * @s: string
+ * Description: counts a string
+ * Return: length of string s
+ */
+
+int _stringlen(const char *s)
+{
+	int count = 0;
+
+	while (*s)
+	{
+		s++;
+		count++;
+	}
+	return (count);
+}
+
+
+/**
  * add_node - adds a node
  * @head: pointer to the first node
  * @str: string literal
@@ -12,19 +32,19 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *tempList;
-	int lenn = 0;
 
-	tempList = malloc(sizeof(list_t));
-	if (tempList == NULL)
-		return (NULL);
+	if (head != NULL && str != NULL)
+	{
+		tempList = malloc(sizeof(list_t));
+		if (tempList == NULL)
+			return (NULL);
 
-	while (str[lenn])
-		lenn++;
+		tempList->str = strdup(str);
+		tempList->len = _stringlen(str);
+		tempList->next = *head;
+		*head = tempList;
 
-	tempList->len = lenn;
-	tempList->str = strdup(str);
-	tempList->next = *head;
-	*head = tempList;
-
-	return (tempList);
+		return (tempList);
+	}
+	return (0);
 }
