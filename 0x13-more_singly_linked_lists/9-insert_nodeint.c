@@ -4,7 +4,7 @@
  * insert_nodeint_at_index - check code below
  * @head: first node
  * @idx: index of the list
- * @n: ...
+ * @n: integer
  * Description: function that inserts a new node at an index
  * Return: the address of the new node, or NULL if otherwise.
  */
@@ -43,7 +43,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	while (i < idx)
 	{
 		tempList = tempList->next;
-		i++:
+		i++;
 	}
 
 	newNode->n = n;
