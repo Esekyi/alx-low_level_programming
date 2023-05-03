@@ -7,7 +7,7 @@
  * Return: Nothing.
  */
 
-void pop_listint(listint_t **head)
+int pop_listint(listint_t **head)
 {
 	listint_t *newHead;
 	int i = 0;
