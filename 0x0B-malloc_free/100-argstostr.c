@@ -19,19 +19,17 @@ char *argstostr(int ac, char **av)
 
 	while (iter < ac)
 	{
-    		while (av[iter][iter2])
+		while (av[iter][iter2])
 		{
 			lengt++;
 			iter2++;
 		}
 		iter2 = 0;
-
 		iter++;
 	}
-
 	ptr_string = malloc((sizeof(char) * lengt) + ac + 1);
-
 	iter = 0;
+
 	while (av[iter])
 	{
 		while (av[iter][iter2])
@@ -51,3 +49,4 @@ char *argstostr(int ac, char **av)
 	ptr_string[k] = '\0';
 
 	return (ptr_string);
+}
