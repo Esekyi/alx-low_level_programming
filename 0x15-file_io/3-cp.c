@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 /**
  * _cp_file - check code
  * @src: source file
- * des: destination 
+ * @des: destination
  * Description: nothing here
  * Return: 1 or -1
  */
@@ -42,7 +42,7 @@ void _cp_file(const char *src, const char *des)
 	}
 
 	fd = open(des, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	
+
 	while ((_read = read(cfd, buffer, 1024)) > 0)
 	{
 		if (write(fd, buffer, _read) != _read || fd == -1)
