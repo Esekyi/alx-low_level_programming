@@ -11,6 +11,12 @@
 
 int main(int argc, char *argv[])
 {
+	if (argc != 2)
+	{
+		fprintf(stderr, "Usage: %s elf_filename\n", argv[0]);
+		return 98;
+	}
+
 	printf("argc:%d, argv:%p\n", argc, (void *)*argv);
 	return (1);
 }
