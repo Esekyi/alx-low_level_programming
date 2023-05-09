@@ -41,7 +41,7 @@ void _cp_file(const char *src, const char *des)
 		exit(98);
 	}
 
-	fd = open(dest, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	fd = open(des, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	
 	while ((_read = read(cfd, buffer, 1024)) > 0)
 	{
@@ -50,5 +50,23 @@ void _cp_file(const char *src, const char *des)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", des);
 			exit(99);
 		}
+	}
+
+	if (_read == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
+		exit(98);
+	}
+
+	if (close(cfd) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", cfd);
+		exit(100);
+	}
+
+	if (close(fd) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
 	}
 }
