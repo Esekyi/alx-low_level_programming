@@ -1,0 +1,7 @@
+CC = gcc
+SRCS = main.c school.c
+
+school: ${SRCS}
+	${CC} ${SRCS} -o school
+
+all: school
